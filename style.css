@@ -1,550 +1,283 @@
 
-:root {
-  --navy: #1a2757;
-  --navy-light: #1f3068;
-  --gold: #c9a43a;
-  --white: #ffffff;
-  --off-white: #f4f5f7;
-  --text-dark: #1a1a2e;
-  --text-muted: #555770;
-  --card-bg: #1a2757;
-  --border-radius: 12px;
-}
-
-/* --- Reset & Base --- */
-*, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family:'DM Sans', sans-serif;
   background-color:#f4f5f7;
-  color:#1a1a2e;
+  color: #1a1a2e;
+  line-height: 1.6;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 a {
   text-decoration: none;
   color: inherit;
 }
 
+.container {
+  max-width:1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* --- 3. Header & Navigation --- */
 header {
-  background-color: #1a2757;
-  padding: 0 40px;
+  background-color:#1a2757;
+  position: sticky;
   top: 0;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  padding: 12px 0;
 }
 
 header .container {
-  max-width: 1100px;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 80px;
 }
 
 .logo h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1rem;
+  font-family:'Playfair Diplay,' serif;
+  font-size: 0.8rem;
   font-weight: 700;
   color:#ffffff;
-  line-height: 1.2;
+  line-height: 1.1;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   background-color:#1f3068;
-  padding: 10px 16px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 12px;
   border-radius: 6px;
-}
-.pages {
-  display: flex;
-  align-items: center;
 }
 
 nav {
   display: flex;
-  gap: 32px;
-  align-items: center;
-}
-nav a {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.85);
-  transition: color 0.2s ease;
-  position: relative;
-  padding-bottom: 4px;
-}
-nav a:hover {
-  color: var(--white);
+  gap: 20px;
 }
 
-nav a.active,
-nav a[href="index.html"] {
-  color: var(--white);
-  font-weight: 600;
-  border-bottom: 2px solid var(--white);
+nav a {
+  font-size: 0.85rem;
+  font-weight: 500;
 }
+
+nav a:hover, nav a.active {
+  color:#ffffff;
+  border-bottom: 2px solid #ffffff;
+}
+
+/* --- 4. Hero Section --- */
 .hero {
-  background-color: var(--white);
-  padding: 64px 40px;
+  background-color:#ffffff;
+  padding: 80px 0;
+  overflow: hidden;
 }
 
 .hero .container {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
   align-items: center;
-  gap: 60px;
-  justify-content: space-between;
-}
-
-/* Hero Text */
-.hero-text {
-  flex: 1;
-  max-width: 500px;
 }
 
 .tagline {
   display: inline-block;
-  background-color: var(--navy);
-  color: var(--white);
+  background-color: #1a2757;
+  color: #ffffff;
   font-size: 0.7rem;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 8px 18px;
+  padding: 8px 16px;
   border-radius: 30px;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
 
-.hero-text h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.6rem;
-  font-weight: 700;
-  color: var(--text-dark);
-  line-height: 1.25;
-  margin-bottom: 16px;
+.hero h1 {
+  font-family:'Playfair Display', serif;
+  font-size: 3rem;
+  line-height: 1.15;
+  color:#1a1a2e;
+  margin-bottom: 20px;
 }
 
-.description {
-  font-size: 0.88rem;
-  color: var(--text-muted);
-  line-height: 1.7;
-  max-width: 380px;
-}
-
-/* Hero Image */
-.hero-image {
-  flex: 1;
-  max-width: 320px;
+.hero .description {
+  font-size: 1rem;
+  color:#555770;
+  max-width: 450px;
 }
 
 .hero-image img {
-  width: 100%;
-  height: auto;
-  border-radius: var(--border-radius);
-  display: block;
+  border-radius: 18px;
 }
 
+/* --- 5. Wellness Areas & Cards --- */
 .wellness-sections {
-  background-color: var(--off-white);
-  padding: 60px 40px;
+  padding:60px 0;
+  background-color:#f4f5f7;
 }
 
-/* Wellness Header Row */
 .wellness-header {
-  max-width: 1100px;
-  margin: 0 auto 32px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .wellness-btn {
-  background-color: var(--navy);
-  color: var(--white);
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.8rem;
+  background-color:#1a2757;
+  color: #ffffff;
   font-weight: 600;
-  letter-spacing: 0.08em;
   text-transform: uppercase;
-  border: none;
-  padding: 12px 24px;
+  letter-spacing: 0.05em;
+  padding: 14px 28px;
   border-radius: 30px;
+  border: none;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: 0.3s ease;
 }
 
-.wellness-btn:hover {
-  background-color: var(--navy-light);
-}
-
-.view-more {
-  font-size: 0.88rem;
-  color: var(--text-muted);
-  font-weight: 500;
-  transition: color 0.2s;
-}
-
-.view-more:hover {
-  color: var(--navy);
-}
-
-/* Cards Grid */
 .wellness-cards {
-  max-width: 1100px;
-  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
 }
 
 .card {
-  background-color: var(--navy);
-  border-radius: var(--border-radius);
-  padding: 28px 24px 24px;
+  background-color:#1a2757;
+  border-radius: 12px;
+  padding: 40px 30px;
+  color:#ffffff;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  position: relative;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  gap: 15px;
+  transition: transform 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(26, 39, 87, 0.3);
+  transform: translateY(-8px);
 }
 
 .card-icon {
-  width: 28px;
-  height: 38px;
-  background-color: var(--gold);
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
-  margin-bottom: 4px;
-  flex-shrink: 0;
+  width: 32px;
+  height: 44px;
+  background-color:#c9a43a;
+  margin-bottom: 10px;
 }
 
 .card h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--white);
-  line-height: 1.3;
+  font-size: 1.5rem;
 }
 
 .card p {
-  font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.7);
-  line-height: 1.5;
+  font-size: 0.9rem;
   flex-grow: 1;
 }
 
 .learn-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: var(--white);
-  font-size: 0.82rem;
-  font-weight: 600;
-  padding: 10px 18px;
+  display: inline-block;
+  padding: 10px 20px;
   border-radius: 8px;
-  margin-top: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: background-color 0.2s ease;
-  width: fit-content;
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
-.learn-btn::after {
-  content: '→';
-  font-size: 0.9rem;
+/* --- 6. Fitness & Nutrition Pages --- */
+.workout-card, .recipe-card {
+  background-color:#152040;
+  border-radius:18px;
+  padding: 30px;
+  color:#ffffff;
+  margin-bottom: 30px;
 }
 
-.learn-btn:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+.workout-card h2, .recipe-card h2 {
+  font-family:'Playfair Display', serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
+.excrise, .meal-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.excrise img {
+  width: 80px;
+  border-radius: 8px;
+}
+
+/* --- 7. Contact Section --- */
 .contact-section {
-  background-color: var(--white);
-  padding: 70px 40px;
-  border-top: 1px solid #e5e7ee;
+  padding:60px 0;
+  background-color:#ffffff;
 }
 
 .contact-section .container {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
   gap: 60px;
-  align-items: flex-start;
 }
 
-.contact-text {
-  flex: 1;
-  max-width: 360px;
-}
 .contact-text h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: var(--text-dark);
-  line-height: 1.2;
-  margin-bottom: 16px;
+  font-family:'Playfair Display',serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
-
-.contact-text p {
-  font-size: 0.82rem;
-  color: var(--text-muted);
-  line-height: 1.75;
-}
-
 
 .contact-form {
-  flex: 1.2;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 15px;
 }
 
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 14px;
+  gap: 15px;
 }
 
-.contact-form input,
-.contact-form textarea {
+input, textarea {
   width: 100%;
-  background-color: #e8eaf0;
-  border: none;
+  padding: 16px;
   border-radius: 8px;
-  padding: 14px 16px;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.88rem;
-  color: var(--text-dark);
-  outline: none;
-  transition: background-color 0.2s ease;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  background-color: #dde0ea;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: #9ea3b8;
-}
-
-.contact-form textarea {
-  min-height: 110px;
-  resize: vertical;
+  border: 1px solid #e1e4e8;
+  background:#f4f5f7;
+  font-family: inherit;
 }
 
 .send-btn {
-  background-color: #c4c7d4;
-  color: var(--text-dark);
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 600;
-  border: none;
+  background-color: #1a2757;
+  color:#ffffff;
+  padding: 16px;
   border-radius: 8px;
-  padding: 14px;
+  border: none;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease;
-  letter-spacing: 0.04em;
 }
 
-.send-btn:hover {
-  background-color: var(--navy);
-  color: var(--white);
-}
-
-
+/* --- 8. Footer --- */
 footer {
-  background-color: var(--navy);
-  padding: 32px 40px;
-}
-
-footer > div {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  background-color:#152040;
+  color:#ffffff;
+  padding: 40px 0;
+  text-align: center;
 }
 
 footer h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--white);
-  line-height: 1.3;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  font-family:'Playfair Display';
+  font-size: 1.2rem;
+  margin-bottom: 10px;
 }
 
 footer p {
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.75);
-  font-style: italic;
-}
-
-<--!Fitness page-->
-/* ===========================
-   THRIVE WELL HUB — style.css
-   =========================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=DM+Sans:wght@300;400;500;600&display=swap');
-
-/* ---------- CSS Variables ---------- */
-:root {
-  --navy:        #152040;
-  --navy-light:  #1e2e55;
-  --navy-card:   #243660;   /* slightly lighter so cards lift off the background */
-  --white:       #ffffff;
-  --off-white:   #e8edf5;
-  --page-bg:     #c8d3e8;   /* visible blue-grey page background */
-  --accent:      #4a7fc1;
-  --divider:     rgba(255, 255, 255, 0.2);
-  --radius:      18px;
-  --font-display: 'Cormorant Garamond', serif;
-  --font-body:    'DM Sans', sans-serif;
-}
-
-/* ---------- Reset ---------- */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: var(--font-body);
-  background-color: var(--page-bg);
-  color: var(--white);
-}
-
-/* Nav */
-.pages nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px 24px;
-  align-items: center;
-}
-
-.pages nav a {
-  font-family: var(--font-body);
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--off-white);
-  text-decoration: none;
-  letter-spacing: 0.04em;
-  padding: 4px 0;
-  border-bottom: 2px solid transparent;
-  transition: color 0.2s, border-color 0.2s;
-}
-
-.pages nav a:hover,
-.pages nav a.active {
-  color: var(--white);
-  border-bottom-color: var(--accent);
-}
-
-.titile-bar {
-  background-color: var(--navy);
-  padding: 18px 40px;
-  text-align: center;
-}
-
-.titile-bar h2 {
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  font-weight: 400;
-  letter-spacing: 0.18em;
-  color: var(--white);
-  text-transform: uppercase;
-}
-
-.workout.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
-  padding: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.workout-card {
-  background-color:#152040;
-  border-radius: var(--radius);
-  padding: 28px 24px 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-}
-
-.workout-card h3 {
-  font-family: var(--font-body);
-  font-size: 0.75rem;
-  font-weight: 400;
-  letter-spacing: 0.12em;
-  color: var(--off-white);
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 6px;
   opacity: 0.7;
 }
-
-.workout-card > h2 {
-  font-family: var(--font-display);
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: var(--white);
-  text-align: center;
-  margin-bottom: 20px;
-  letter-spacing: 0.02em;
-}
-
-/* ---------- Exercise Row ---------- */
-.excrise {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 14px 0;
-}
-
-.excrise div p {
-  font-size: 0.82rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: var(--off-white);
-}
-
-/* Image placeholder */
-.excrise img {
-  width: 72px;
-  height: 56px;
-  object-fit: cover;
-  border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.08);
-  flex-shrink: 0;
-  /* Shows a subtle placeholder when no src is set */
-  border: 1px dashed rgba(255, 255, 255, 0.2);
-  display: block;
-}
-
-/* Divider */
-.workout-card hr {
-  border: none;
-  border-top: 1px solid var(--divider);
-  margin: 0;
-}
-

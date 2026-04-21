@@ -1,0 +1,232 @@
+oot {
+  /* Core Palette */
+  --navy:            #1a2757;
+  --navy-dark:       #0d142d;
+  --gold:            #c9a43a;
+  --white:           #ffffff;
+  --off-white:       #f8f9fb;
+  --surface-dim:     #e5e7ee;
+
+  /* Text Colors */
+  --text-dark:       #1a2757;
+  --text-muted:      #555770;
+  --text-on-navy:    rgba(255, 255, 255, 0.9);
+
+  /* Layout & Spacing */
+  --radius-lg:       24px;
+  --radius-md:       16px;
+  --radius-sm:       8px;
+
+  /* Typography */
+  --font-display:    'Noto Serif', serif;
+  --font-body:       'Inter', sans-serif;
+}
+
+/* --- Base & Reset --- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--white); /* Main Background: White */
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* --- Navigation & Header --- */
+header {
+  background-color: var(--navy);
+  padding: 16px 24px;
+  color: var(--white);
+}
+
+.logo h1 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+nav {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+nav a {
+  color: var(--text-on-navy);
+  font-size: 0.8rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+/* --- Title Bar --- */
+.titile-bar {
+  background-color: var(--navy-dark);
+  padding: 24px;
+  text-align: center;
+}
+
+.titile-bar h2 {
+  font-family: var(--font-display);
+  color: var(--white);
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* --- Recipe Container --- */
+.recipe-container {
+  padding: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.recipe-cards {
+  background: var(--navy); /* Recipe Card: Navy Blue */
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  color: var(--white);
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(26, 39, 87, 0.15);
+  margin-bottom: 40px;
+}
+
+.recipe-cards h3 {
+  color: var(--gold);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.recipe-cards h2 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.meal-info {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.meal-info p {
+  font-size: 0.75rem;
+  color: var(--text-on-navy);
+}
+
+.meal-info strong {
+  color: var(--gold);
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+}
+
+/* --- Ingredients & Directions Section --- */
+.recipe-details {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px 60px;
+}
+
+h4 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  margin: 40px 0 20px;
+  position: relative;
+  padding-left: 16px;
+  color: var(--navy);
+}
+
+h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: var(--gold);
+  border-radius: 2px;
+}
+
+ul {
+  list-style: none;
+  background: var(--off-white);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  border: 1px solid var(--surface-dim);
+}
+
+li {
+  font-size: 0.95rem;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  color: var(--text-muted);
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+.step {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.step-text {
+  background: var(--off-white);
+  padding: 24px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--surface-dim);
+}
+
+.step-text strong {
+  display: block;
+  color: var(--gold);
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.step img {
+  width: 100%;
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Footer --- */
+footer {
+  background-color: var(--navy);
+  color: var(--white);
+  padding: 40px 24px;
+  text-align: center;
+}
+
+footer h1 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+footer p {
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
