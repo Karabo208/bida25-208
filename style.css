@@ -395,3 +395,156 @@ footer p {
   font-style: italic;
 }
 
+<--!Fitness page-->
+/* ===========================
+   THRIVE WELL HUB — style.css
+   =========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+/* ---------- CSS Variables ---------- */
+:root {
+  --navy:        #152040;
+  --navy-light:  #1e2e55;
+  --navy-card:   #243660;   /* slightly lighter so cards lift off the background */
+  --white:       #ffffff;
+  --off-white:   #e8edf5;
+  --page-bg:     #c8d3e8;   /* visible blue-grey page background */
+  --accent:      #4a7fc1;
+  --divider:     rgba(255, 255, 255, 0.2);
+  --radius:      18px;
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body:    'DM Sans', sans-serif;
+}
+
+/* ---------- Reset ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--page-bg);
+  color: var(--white);
+}
+
+/* Nav */
+.pages nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 24px;
+  align-items: center;
+}
+
+.pages nav a {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--off-white);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.pages nav a:hover,
+.pages nav a.active {
+  color: var(--white);
+  border-bottom-color: var(--accent);
+}
+
+.titile-bar {
+  background-color: var(--navy);
+  padding: 18px 40px;
+  text-align: center;
+}
+
+.titile-bar h2 {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.workout.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.workout-card {
+  background-color:#152040;
+  border-radius: var(--radius);
+  padding: 28px 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.workout-card h3 {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  color: var(--off-white);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 6px;
+  opacity: 0.7;
+}
+
+.workout-card > h2 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- Exercise Row ---------- */
+.excrise {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 0;
+}
+
+.excrise div p {
+  font-size: 0.82rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--off-white);
+}
+
+/* Image placeholder */
+.excrise img {
+  width: 72px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.08);
+  flex-shrink: 0;
+  /* Shows a subtle placeholder when no src is set */
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  display: block;
+}
+
+/* Divider */
+.workout-card hr {
+  border: none;
+  border-top: 1px solid var(--divider);
+  margin: 0;
+}
+
