@@ -1,5 +1,4 @@
 oot {
-  /* Core Palette */
   --navy:            #1a2757;
   --navy-dark:       #0d142d;
   --gold:            #c9a43a;
@@ -7,22 +6,18 @@ oot {
   --off-white:       #f8f9fb;
   --surface-dim:     #e5e7ee;
 
-  /* Text Colors */
   --text-dark:       #1a2757;
   --text-muted:      #555770;
   --text-on-navy:    rgba(255, 255, 255, 0.9);
 
-  /* Layout & Spacing */
   --radius-lg:       24px;
   --radius-md:       16px;
   --radius-sm:       8px;
 
-  /* Typography */
   --font-display:    'Noto Serif', serif;
   --font-body:       'Inter', sans-serif;
 }
 
-/* --- Base & Reset --- */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -31,12 +26,11 @@ oot {
 
 body {
   font-family: var(--font-body);
-  background-color: var(--white); /* Main Background: White */
+  background-color: var(--white); 
   color: var(--text-dark);
   line-height: 1.6;
 }
 
-/* --- Navigation & Header --- */
 header {
   background-color: var(--navy);
   padding: 16px 24px;
@@ -69,7 +63,6 @@ nav a:hover {
   color: var(--gold);
 }
 
-/* --- Title Bar --- */
 .titile-bar {
   background-color: var(--navy-dark);
   padding: 24px;
@@ -84,7 +77,6 @@ nav a:hover {
   text-transform: uppercase;
 }
 
-/* --- Recipe Container --- */
 .recipe-container {
   padding: 24px;
   max-width: 800px;
@@ -92,7 +84,7 @@ nav a:hover {
 }
 
 .recipe-cards {
-  background: var(--navy); /* Recipe Card: Navy Blue */
+  background: var(--navy); 
   border-radius: var(--radius-lg);
   padding: 32px 24px;
   color: var(--white);
@@ -137,7 +129,6 @@ nav a:hover {
   margin-bottom: 4px;
 }
 
-/* --- Ingredients & Directions Section --- */
 .recipe-details {
     max-width: 800px;
     margin: 0 auto;
@@ -211,7 +202,6 @@ li:last-child {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
-/* --- Footer --- */
 footer {
   background-color: var(--navy);
   color: var(--white);
