@@ -287,3 +287,101 @@ img {
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.15); /* soft shadow */
 }
+/* ===== OUR VALUES ===== */
+.our-values {
+  padding: 70px 20px;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #0d1b4b;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  color: #666;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 1rem;
+}
+
+/* MISSION BANNER */
+.mission-banner {
+  background-color: #0d1b4b;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 40px 50px;
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mission-banner h3 {
+  font-size: 1.6rem;
+  color: #c9a84c;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.mission-banner p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #ddd;
+}
+
+/* ABOUT CARDS */
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+.about-card {
+  background-color: #ffffff;
+  border: 2px solid #0d1b4b;
+  border-radius: 12px;
+  padding: 30px 25px;
+  line-height: 1.8;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.about-card:hover {
+  border-color: #c9a84c;
+  transform: translateY(-5px);
+}
+
+.about-card h3 {
+  color: #0d1b4b;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.about-card p {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+/* CLOSING */
+.closing-message {
+  text-align: center;
+  font-style: italic;
+  color: #0d1b4b;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.closing-message strong {
+  color: #c9a84c;
+  font-style: normal;
+}
