@@ -1,29 +1,36 @@
-// Apply saved theme preference on page load
-function applyThemePreference() {
-  const btn = document.querySelector('#dark-toggle');
-  if (!btn) return;
-
-  if (localStorage.getItem('theme') === 'dark') {
-    document.body.classList.add('dark-mode');
-    btn.textContent = ' Light';
-  } else {
-    btn.textContent = 'dark';
-  }
-}
-
 function toggleDarkMode() {
-  const btn = document.querySelector('#dark-toggle');
-  if (!btn) return;
-
-  document.body.classList.toggle('dark-mode');
-
-  if (document.body.classList.contains('dark-mode')) {
-    localStorage.setItem('theme', 'dark');
-    btn.textContent = '☀️ Light';
-  } else {
-    localStorage.setItem('theme', 'light');
-    btn.textContent = '🌙 Dark';
-  }
+    document.body.classList.toggle('dark-mode');
+    
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        section.classList.toggle('dark-mode');
+    });
+    
+    const btn = document.getElementById('dark-toggle');
+    
+    if (document.body.classList.contains('dark-mode')) {
+        if (btn) btn.textContent = 'Light mode';
+        localStorage.setItem('theme', 'dark'); 
+    } else {
+        if (btn) btn.textContent = 'Dark mode';
+        localStorage.setItem('theme', 'light'); 
+    }
 }
 
-document.addEventListener('DOMContentLoaded', applyThemePreference);
+// Automatically apply the saved theme when any page loads
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme');
+    const btn = document.getElementById('dark-toggle');
+    
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        
+        // Apply to sections on load too
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            section.classList.add('dark-mode');
+        });
+        
+        if (btn) btn.textContent = 'Light mode';
+    }
+});
