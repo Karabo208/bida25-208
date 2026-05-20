@@ -41,7 +41,6 @@ header .container {
   padding: 0 30px;
 }
 
-/* ===== LOGO ===== */
 .logo h1 {
   color: #ffffff;
   font-size: 1.2rem;
@@ -68,12 +67,10 @@ header .container {
   transition: color 0.3s ease;
 }
 
-/* ===== HOVER EFFECT ===== */
 .pages nav a:hover {
   color: #c9a84c;
 }
 
-/* Active page highlight */
 .pages nav a.active {
   color: #c9a84c;
 }
@@ -112,7 +109,6 @@ header .container {
   padding: 0 30px;
 }
 
-/* ===== LOGO ===== */
 .logo h1 {
   color: #ffffff;
   font-size: 1.2rem;
@@ -122,7 +118,6 @@ header .container {
   text-transform: uppercase;
 }
 
-/* ===== NAV ===== */
 .pages nav {
   display: flex;
   gap: 30px;
@@ -139,16 +134,13 @@ header .container {
   transition: color 0.3s ease;
 }
 
-/* ===== HOVER EFFECT ===== */
 .pages nav a:hover {
   color: #c9a84c;
 }
 
-/* Active page highlight */
 .pages nav a.active {
   color: #c9a84c;
 }
-/* --- 4. Hero Section --- */
 .hero {
   background-color:#ffffff;
   padding: 80px 0;
@@ -193,7 +185,6 @@ header .container {
   border-radius: 18px;
 }
 
-/* --- 5. Wellness Areas & Cards --- */
 .wellness-sections {
   padding:60px 0;
   background-color:#f4f5f7;
@@ -263,7 +254,6 @@ header .container {
   font-weight: 600;
 }
 
-/* --- 6. Fitness & Nutrition Pages --- */
 .workout-card, .recipe-card {
   background-color:#152040;
   border-radius:18px;
@@ -291,7 +281,6 @@ header .container {
   border-radius: 8px;
 }
 
-/* --- 7. Contact Section --- */
 .contact-section {
   padding:60px 0;
   background-color:#ffffff;
@@ -340,7 +329,6 @@ input, textarea {
   cursor: pointer;
 }
 
-/* --- 8. Footer --- */
 footer {
   background-color:#152040;
   color:#ffffff;
@@ -358,7 +346,6 @@ footer p {
   font-size: 0.85rem;
   opacity: 0.7;
 }
-/* ===== DARK MODE TOGGLE BUTTON ===== */
 .dark-toggle {
   background: transparent;
   border: 2px solid #ffffff;
@@ -377,7 +364,6 @@ footer p {
   color: #000;
 }
 
-/* ===== DARK MODE STYLES ===== */
 body.dark-mode {
   background-color: #121212;
   color: #e0e0e0;
@@ -433,11 +419,6 @@ body.dark-mode .closing-message {
 body.dark-mode footer {
   background-color: #0a0a0a;
 }
-/* ==========================================================================
-   GLOBAL DARK MODE OVERRIDES (Forces Dark Background & White Text)
-   ========================================================================== */
-
-/* 1. Force the main backgrounds dark and all core text white */
 body.dark-mode,
 body.dark-mode html,
 section.dark-mode,
@@ -446,7 +427,6 @@ section.dark-mode,
     color: #ffffff !important;
 }
 
-/* 2. Target headings, paragraphs, lists, links, and text containers */
 body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4,
 section.dark-mode h1, section.dark-mode h2, section.dark-mode h3, section.dark-mode h4,
 body.dark-mode p, section.dark-mode p,
@@ -456,7 +436,6 @@ body.dark-mode span, body.dark-mode a, body.dark-mode strong,
     color: #ffffff !important;
 }
 
-/* 3. Turn the values cards, containers, and inner boxes dark */
 body.dark-mode .about-content,
 body.dark-mode .about-card,
 body.dark-mode .topic-section,
@@ -471,27 +450,21 @@ body.dark-mode .step-text {
     border-color: #444444 !important;
 }
 
-/* 4. Fix specific dark layout boxes (like the mission banner) */
 body.dark-mode .mission-banner {
     background-color: #080f2b !important;
     border: 1px solid #333333 !important;
 }
 
-/* 5. Clean up contact inputs if they are on the page */
 body.dark-mode input,
 body.dark-mode textarea {
     background-color: #2a2a2a !important;
     color: #ffffff !important;
     border: 1px solid #555555 !important;
 }
-/* ==========================================================================
-   MOBILE, TABLET, AND DESKTOP RESPONSIVE MEDIA QUERIES
-   ========================================================================== */
 
-/* Optimization for Tablets and Smaller Displays (under 992px wide) */
 @media screen and (max-width: 992px) {
     .topic-content {
-        flex-direction: column !important; /* Stacks image and text vertically */
+        flex-direction: column !important; 
         gap: 30px !important;
         text-align: center !important;
     }
@@ -501,11 +474,9 @@ body.dark-mode textarea {
     }
 }
 
-/* Optimization for Mobile Phones (under 768px wide) */
 @media screen and (max-width: 768px) {
-    /* 1. Header & Navigation Menu Adaptations */
     header .container {
-        flex-direction: column !important; /* Stacks Logo title above navigation menu */
+        flex-direction: column !important;
         gap: 15px !important;
         padding: 15px !important;
         text-align: center !important;
@@ -513,30 +484,28 @@ body.dark-mode textarea {
 
     header .container nav {
         flex-direction: row !important;
-        flex-wrap: wrap !important; /* Lets nav buttons wrap clean onto a new line */
+        flex-wrap: wrap !important; 
         justify-content: center !important;
         gap: 15px !important;
     }
 
     #dark-toggle {
         margin-right: 0 !important;
-        width: 100% !important; /* Button spans full width on tight screens */
+        width: 100% !important; 
         margin-bottom: 5px !important;
     }
 
-    /* 2. Layout Column Shifts (collapsing grids) */
     .workout.grid,
     .about-content {
-        grid-template-columns: 1fr !important; /* Forces multi-column cards into 1 single column */
+        grid-template-columns: 1fr !important; 
         padding: 10px !important;
     }
 
     .mission-banner {
-        padding: 25px 20px !important; /* Less massive spacing so content doesn't squeeze out */
+        padding: 25px 20px !important;
         margin: 20px 15px !important;
     }
 
-    /* 3. Typography Adjustments (shrinks headings so they don't break lines awkwardly) */
     h1, .article h2 {
         font-size: 1.6rem !important;
     }
@@ -545,20 +514,19 @@ body.dark-mode textarea {
         font-size: 1.4rem !important;
     }
 
-    /* 4. Fluid Element Spacing & Sizing Overrides */
     .recipe-container, 
     .recipe-cards {
         padding: 16px 12px !important;
     }
 
     img {
-        width: 100% !important; /* Keeps your illustration pictures inside screen edges */
+        width: 100% !important;
         max-width: 100% !important;
     }
     
     .contact-form .form-row {
         display: flex !important;
-        flex-direction: column !important; /* Stacks name/email inputs on top of each other */
+        flex-direction: column !important; 
         gap: 10px !important;
     }
 }
