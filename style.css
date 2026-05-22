@@ -427,15 +427,17 @@ section.dark-mode,
     color: #ffffff !important;
 }
 
-body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4,
-section.dark-mode h1, section.dark-mode h2, section.dark-mode h3, section.dark-mode h4,
-body.dark-mode p, section.dark-mode p,
-body.dark-mode li, section.dark-mode li,
-body.dark-mode span, body.dark-mode a, body.dark-mode strong,
-.article p, .article h2, .article h4, .section-subtitle {
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode span,
+body.dark-mode a,
+body.dark-mode strong,
+body.dark-mode .article p,
+body.dark-mode .article h2,
+body.dark-mode .article h4,
+body.dark-mode .section-subtitle {
     color: #ffffff !important;
 }
-
 body.dark-mode .about-content,
 body.dark-mode .about-card,
 body.dark-mode .topic-section,
