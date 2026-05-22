@@ -437,7 +437,7 @@ body.dark-mode textarea {
 
 @media screen and (max-width: 768px) {
     header .container {
-        flex-direction: column !important; 
+        flex-direction: column !important;
         gap: 15px !important;
         padding: 15px !important;
         text-align: center !important;
@@ -449,7 +449,7 @@ body.dark-mode textarea {
         justify-content: center !important;
         gap: 15px !important;
     }
-
+}
     #dark-toggle {
         margin-right: 0 !important;
         width: 100% !important; 
